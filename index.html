@@ -9,6 +9,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="form closed">
+    <div class="paranza"></div>
+    <div class="fore-close">
+        <button type="button" class="close"><img src="close.png"></button>
+    </div>
+
+        <div class="window">
+            <p>оставьте свои контакты. Мы свяжемся с вами и осбудим ваш проект</p>
+            <div class="contact-us">
+                <div class="input">
+                    <input type="text" class="vvod" placeholder="Ваше имя">
+                </div>
+                <div class="input">
+                    <input type="tel" class="vvod" placeholder="Ваш телефон">
+                </div>
+            </div>
+            <div class="button-send">
+                <div class="send">
+                    <button>Отправить</button>
+                </div>
+                <div class="agreement">
+                    Нажимая на кнопку, я даю <a href="agreement">согласие на обработку персональных данных</a>
+                </div>
+            </div>
+        </div>
+     
+    </div>
     <header>
         <section class="wallpaper">
             <div class="home"></div>
@@ -67,8 +94,8 @@
         <!-- 2 -->
         <img src="inter.png" class="inter-png">
         <div class="line">
-            <div class="wline">___________________</div>
-            <div class="oline">______________________________________________________________</div>
+            <button class="slider-control"></button>
+            <div class="slider-line"></div>
         </div>
         <p class="zagolovok">практичность и рациональное использование каждого квадратного метра</p>
         <div class="tasks_solution">
@@ -96,7 +123,9 @@
             <div class="pic-3"><img src="pic-3.png"></div>
             <div class="pic-4"><img src="pic-4.png"><button class="b2"><img src="button2.png"></button></div>
     </div>
+    <div class="application">
     <p class="pre-footer"><a href="a">оставить заявку на проект<sup>↗</sup></a></p>
+</div>
 </section>
 <footer>
     <div class="links">
@@ -105,5 +134,22 @@
     </div>
     <p class="ccc">© 2022 LA Design, all rights reserved.</p>
 </footer>
+<!-- скрипт -->
+<script>
+    const form = document.querySelector('.form');
+    const openButton = document.querySelector('.application');
+    const closeButton = document.querySelector('.close')
+
+    openButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        form.classList.remove('closed');
+        form.classList.add('opened');
+    } )
+
+    closeButton.addEventListener('click', (event) => {
+        form.classList.remove('opened');
+        form.classList.add('closed');
+    } )
+</script>
 </body>
 </html>
