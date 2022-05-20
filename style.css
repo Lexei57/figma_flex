@@ -1,0 +1,544 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+}
+.paranza{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    z-index: 2;
+    background: none;
+    border: none;
+    top: 0%;
+    left: 97.3%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.close:hover{
+    transform: rotateZ(90deg);
+}
+.fore-close{
+    /* background-color: red; */
+    position: fixed;
+    z-index: 1;
+    width: 800px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -210px;
+}
+.window{
+    position: fixed;
+    width: 800px;
+    height: 360px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -180px;
+    z-index: 2;
+}
+.window p{
+    color: #777777;
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 45px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    max-width: 730px;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.contact-us{
+    display: flex;
+    margin-left: -8px;
+    padding-top: 40px;
+}
+.contact-us :nth-child(1){
+    margin-left: 30px;
+}
+.input input{
+    width: 335px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    outline: none;
+}
+.button-send{
+    display: flex;
+    padding-top: 40px;
+    padding-left: 50px;
+}
+/* случай, когда нужно вставить картинку в псевдоэлемент */
+.send button::after{
+    content: url(/strelka1.png);
+    padding-left: 5px;
+}
+.send button{
+    width: 228px;
+    height: 60px;
+    background-color: #393246;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+.agreement{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #878787;
+    padding-left: 34px;
+    padding-top: 15px;
+    max-width: 350px;
+}
+.agreement a{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #878787;
+}
+
+.wallpaper{
+    position: relative;
+    min-height: 636px;
+    /* box-sizing: border-box; было отключено*/
+    /* способ задать картинку в бекграунд */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-color: #000; */
+    /* background-image: url(home.png); */
+    /* filter: brightness(40%); */
+}
+.home{
+    position: relative;
+    background-image: url(home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* задает затенение на картинку */
+    /* filter: brightness(40%); */
+    /* position: relative; */
+    /* max-width: 2420px; было выключено */
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.805); */
+}
+/* Задает темный фон */
+.home::before{
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.menu{
+    border-bottom: 0.5px solid #878787;
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+.item-1{
+    align-self: flex-start;
+    padding: 27px;
+}
+.item-2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap:50px;
+}
+
+@media screen and (max-width:950px) {
+    .item-2{
+        gap: 0px;
+    }
+    
+}
+
+.item-2 a{
+    padding-left: 50px;
+}
+.item-3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.logo{
+    cursor: pointer;
+}
+.main-word{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 532px;
+    /* background-color: green; */
+    justify-content: center;
+    /* padding-top: 15%; */
+}
+.loft{
+    line-height: 3;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+}
+.unique{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.button-up{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+.button-up button{
+    background: none;
+    border: none;
+}
+
+.design{
+    display: flex;
+    align-items: center;
+    padding-top: 3%;
+    padding-left: 19.5%;
+}
+.design p{
+    color: #777777;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+/* 1 */
+.description{
+    /* background-color: red; */
+    display: flex;
+    margin-left: 19.3%;
+    margin-top: 2%;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.items-1{
+    /* background-color: green; */
+    max-width: 500px;
+    width: 100%;
+}
+
+.kriterii{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #D5D5D5;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.fonts{
+    color: #878787;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.fonts-2{
+    color: #393246;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.items-2{
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+}
+.item-21{
+    line-height: 24px;
+    color: #777777;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 500px;
+    width: 100%;
+}
+/* 2 */
+.inter-png{
+    margin-top: 4%;
+    margin-left: 18%;
+    max-width: 1200px;
+    width: 100%;
+    left: auto;
+    padding-bottom: 1%;
+}
+@media screen and (max-width:950px){
+    .inter-png{
+        max-width: 800px;
+        margin-left: 3%;
+    }
+}   
+
+.line{
+   width: 600px;
+   position: relative;
+   margin: 0 auto;
+}
+.slider-line{
+border: 1px solid #D5D5D5;
+}
+.slider-control{
+    width: 120px;
+    position: absolute;
+    border: 3px solid black;
+    padding: 0;
+    background-color: none;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width:850px){
+    .line{
+        margin-left: 5%;
+    }
+}   
+.zagolovok{
+    color: #777777;
+    text-transform:uppercase;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.08em;
+    max-width: 1000px;
+    margin-left:20% ;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+.tasks_solution{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    max-width: 1170px;
+    gap: 100px;
+    padding-top: 5%;
+}
+.tasks p, .solution p{
+    min-width: 500px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777777
+    
+}
+.intasks, .insolution{
+    color: #777777;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 850px){
+    .tasks_solution{
+        flex-wrap: wrap;
+    }
+}
+
+.shkaf{
+    margin-top: 5%;
+    max-width: 100%;
+}
+.pros{
+    color: #777777;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-left: 20%;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+.pros-p{
+    display: flex;
+    max-width: 1170px;
+    margin-left: 20%;
+    margin-bottom: 3%;
+}
+.pros-1{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+}
+.pros-2{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+    padding-top: 0.5%;
+}
+.block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1270px;
+    margin-left: 20%;
+    gap: 3%;
+}
+.block-3, .block-4{
+    padding-top: 2.5%;
+}
+.similar-projects{
+    color: #777777;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-left: 41% ;
+    padding-top: 10%;
+}
+.pictures{
+    display: flex;
+    gap: 2%;
+    margin-left: 20%;
+    padding-top: 4%;
+    flex-wrap: wrap;
+}
+
+.b1{
+    position: absolute;
+/* позволяет прикрепить в люои месте элементЮ которй будет корректно отображаться во всех масштабах */
+    transform: translate(-620%, 290%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    
+}
+.b2{
+    position: absolute;
+    transform: translate(-175%, 290%);
+    cursor: pointer;
+    background:none;
+    border: none;
+}
+.pre-footer{
+    color: #777777;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 10% 0 10% 35%;
+}
+.pre-footer a{
+    color: #777777;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #F7F7F7;
+    width: 100%;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+.link-1{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.link-1 a{
+    text-decoration: none;
+    color: #777777;
+}
+.ccc{
+    color: #878787;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+
+.opened{
+    display: block;
+}
+
+.closed{
+    display: none;
+}
+
+.send:hover{
+    filter:opacity(94%);
+}
+
+.vvod:hover{
+    /* border-bottom: 2px solid #878787; */
+    font-weight: 600;
+}
+
+
+
+
+/* псевдоэлементы. Нужны для внедрения контента без использования html */
+/* .loft::before{
+    content: "yo";
+    color: red;
+} */

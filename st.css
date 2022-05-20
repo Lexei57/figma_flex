@@ -1,0 +1,12 @@
+.card{
+    display: flex;
+}
+.list{
+    max-width: 500px;
+    background-color: aqua;
+    width: 100%;
+}
+.list_item{
+    display: flex;
+    justify-content: space-between;
+}
